@@ -1,9 +1,7 @@
 from typing import Annotated
-
 from fastapi import Depends, FastAPI, HTTPException, Query
 from sqlmodel import Field, Session, SQLModel, create_engine, select
 import uuid
-
 
 class pedidos(SQLModel, table=True):
     id: str  = Field(default=str(uuid.uuid4()), primary_key=True)
